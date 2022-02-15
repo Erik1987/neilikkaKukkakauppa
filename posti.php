@@ -7,8 +7,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 //$to = "jukka.aula@omnia.fi";
-define('SMTPUSERNAME',$username);
-define('SMTPPASSWORD',$password);
+define('SMTPUSERNAME','erik.ilonen@gmail.com');
+define('SMTPPASSWORD','Haistamango1!google');
 
 function posti($emailTo,$msg,$subject){
 $emailFrom = "erik.ilonen@gmail.com";

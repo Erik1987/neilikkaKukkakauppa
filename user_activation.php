@@ -5,14 +5,17 @@
     global $email_verified, $email_already_verified, $activation_error;
 
     // GET the token = ?token
-    if(!empty($_GET['token'])){
+    /*if(!empty($_GET['token'])){
        $token = $_GET['token'];
     } else {
         $token = "";
-    }
+    }*/
 
-    if($token != "") {
-        $sqlQuery = mysqli_query($connection, "SELECT * FROM users WHERE token = '$token' ");
+    $token = !empty($_GET['token']) ? $_GET['token'] : "";
+ 
+    if ($token) {
+        /* Huom. token eri tauluun, rajattu tokenin voimassaoloaika */
+        $sqlQuery = mysqli_query($connection, "SELECT * FROM users WHERE token = '$token'");
         $countRow = mysqli_num_rows($sqlQuery);
 
         if($countRow == 1){
@@ -40,5 +43,7 @@
             ';
         }
     }
+
+?>
 
 ?>
