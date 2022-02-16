@@ -68,16 +68,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
   
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Käyttäjätunnus" name="username">
+    <input class="input-field" type="text" placeholder="Käyttäjätunnus" name="username" required  >
   </div>
 
   <div class="input-container">
     <i class="fa fa-envelope icon"></i>
-    <input class="input-field" type="text" placeholder="Sähköposti" name="email">
+    <input class="input-field" type="text" placeholder="Sähköposti" name="email" required  >
   </div>
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Salasana" name="password">
+    <input class="input-field" type="password" placeholder="Salasana" name="password" required  >
   </div>
   <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div>
   <button type="submit" class="btn" name="register">Rekisteröi</button>

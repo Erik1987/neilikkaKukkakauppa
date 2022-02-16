@@ -2,13 +2,14 @@
 require 'Exception.php';
 require 'PHPMailer.php';
 require 'SMTP.php';
+require '../../../tunnukset.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 //$to = "jukka.aula@omnia.fi";
-define('SMTPUSERNAME','erik.ilonen@gmail.com');
-define('SMTPPASSWORD','Haistamango1!google');
+define('SMTPUSERNAME',$smtpUsername);
+define('SMTPPASSWORD',$smtpPassword);
 
 function posti($emailTo,$msg,$subject){
 $emailFrom = "erik.ilonen@gmail.com";

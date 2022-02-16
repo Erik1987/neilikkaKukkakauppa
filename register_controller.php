@@ -7,9 +7,9 @@
     
     // Database connection
 $polku = "http://localhost";
-$projekti = "/hello/PHP/neilikka";
+$projekti = "hello/PHP/neilikka";
 
-require './tunnukset.php';
+require '../../../tunnukset.php';
 include('posti.php');
 
 
@@ -99,9 +99,8 @@ include('posti.php');
                     // Send verification email
                     if($sqlQuery) {
                        
-                        $msg = 'Click on the activation link to verify your email. <br><br>
-                          <a href="$polku/$projekti/user_verificaiton.php?token='.$token.'"> Click here to verify email</a>
-                        ';
+                        $msg = "Click on the activation link to verify your email. <br><br>
+                          <a href=\"$polku/$projekti/user_verification.php?token=$token\"> Click here to verify email</a>";
                         $subject = "Please Verify Email Address!";
                         $result = posti($email,$msg,$subject);
                           echo $result;

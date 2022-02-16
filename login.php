@@ -25,7 +25,7 @@
         }
 
         if(!empty($email_signin) && !empty($password_signin)){
-            if(!preg_match("/^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]{6,20}$/", $pswd)) {
+            if(!preg_match("/^.{8,20}/", $pswd)) {
                 $wrongPwdErr = '<div class="alert alert-danger">
                         Password should be between 6 to 20 charcters long, contains atleast one special chacter, lowercase, uppercase and a digit.
                     </div>';
@@ -56,6 +56,8 @@
                        $_SESSION['id'] = $id;
                        $_SESSION['email'] = $email;
                        $_SESSION['token'] = $token;
+                       $_SESSION['username'] = $username;
+                       $_SESSION['loggedin'] = true;
 
                         /* JAu */
                        if (isset($_SESSION['next_page'])){
