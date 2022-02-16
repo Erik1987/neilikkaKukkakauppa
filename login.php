@@ -9,7 +9,7 @@
     if(isset($_POST['login'])) {
         $email_signin        = $_POST['email'];
         $password_signin     = $_POST['password'];
-
+        
         // clean data 
         $user_email = filter_var($email_signin, FILTER_SANITIZE_EMAIL);
         $pswd = mysqli_real_escape_string($connection, $password_signin);
@@ -18,17 +18,18 @@
         $sql = "SELECT * From users WHERE email = '{$email_signin}' ";
         $query = mysqli_query($connection, $sql);
         $rowCount = mysqli_num_rows($query);
-
+       
         // If query fails, show the reason 
         if(!$query){
            die("SQL query failed: " . mysqli_error($connection));
         }
 
         if(!empty($email_signin) && !empty($password_signin)){
-            if(!preg_match("/^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]{6,20}$/", $pswd)) {
+            if(!preg_match("/^.{8,20}/", $pswd)) {
                 $wrongPwdErr = '<div class="alert alert-danger">
                         Password should be between 6 to 20 charcters long, contains atleast one special chacter, lowercase, uppercase and a digit.
                     </div>';
+                    
             }
             // Check if email exist
             if($rowCount <= 0) {
@@ -44,7 +45,7 @@
                     $token         = $row['token'];
                     $is_active     = $row['is_active'];
                 }
-
+                
                 // Verify password
                 $password = password_verify($password_signin, $pass_word);
 
@@ -55,6 +56,8 @@
                        $_SESSION['id'] = $id;
                        $_SESSION['email'] = $email;
                        $_SESSION['token'] = $token;
+                       $_SESSION['username'] = $username;
+                       $_SESSION['loggedin'] = true;
 
                         /* JAu */
                        if (isset($_SESSION['next_page'])){

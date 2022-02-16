@@ -1,6 +1,6 @@
 <?php
 $tunniste = "loggedin";
-$loginsivu = "index.php";
+$loginsivu = "login-form.php";
 /* Suojattujen sivujen alkuun */
 if (!session_id()) session_start();
 // Check if the user is logged in, if not then redirect him to login page
