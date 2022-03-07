@@ -1,7 +1,6 @@
 <?php // Place this code at the top of all pages which you want to protect
 session_start();
-//if ( ! isset( $_SESSION['isLogged'] ) or "1" != $_SESSION['isLogged'] )
-//header('Location: ' . './login.php');?>
+include('db.php');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,11 +11,12 @@ session_start();
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+<link rel="stylesheet" href="style.css">
 <title>Neilikka bootstrap</title>
 </head>
 <style>
-          
+       .container img {width: 100%;
+       height: 300px;}   
 </style>
 </head>
 <body>
@@ -37,16 +37,16 @@ session_start();
           <div class="col-sm-4">
             <i class="fab fa-affiliatetheme fa-2x"></i>
             <h3>Asiantuntevuus</h3> <br>
-            <img src="http://www.pdphoto.org/images/travels.jpg" alt="Mountains" style="width:100%">
-      <div class="kuvaus">Talo</div>
+            <img src="https://images.pexels.com/photos/4505171/pexels-photo-4505171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Mountains" style="width:100%">
+      <div class="kuvaus">Puutarha</div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
           </div>
           <div class="col-sm-4">
             <i class="fab fa-adn fa-2x"></i>
             <h3>Ammattitaito</h3> <br>
-            <img src="http://www.pdphoto.org/images/beer.jpg" alt="Forest" style="width:100%">
-      <div class="kuvaus">Olut</div>
+            <img src="https://images.pexels.com/photos/2817549/pexels-photo-2817549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Forest" style="width:100%">
+      <div class="kuvaus">Tomaatit</div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
           </div>
@@ -54,8 +54,8 @@ session_start();
             <i class="fab fa-algolia fa-2x "></i>
             <h3>Valikoima</h3>
             <br>   
-            <img src="http://www.pdphoto.org/images/sandiego.jpg" alt="Mountains" style="width:100%">
-      <div class="kuvaus">Kaupunki</div>     
+            <img src="https://images.pexels.com/photos/4597121/pexels-photo-4597121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Mountains" style="width:100%">
+      <div class="kuvaus">Kasvihuone</div>     
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
           </div>

@@ -1,6 +1,7 @@
 <style>
           
-#footer {flex:1;}
+#footer {flex:1;
+       }
 </style>
 
 <footer id="footer" class="bg-dark navbar-dark" style="background-color: rgb(34, 34, 34); text-align: center;

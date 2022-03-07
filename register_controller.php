@@ -6,10 +6,10 @@
     
     
     // Database connection
-$polku = "http://localhost";
+$polku = "https://localhost";
 $projekti = "hello/PHP/neilikka";
 
-require '../../../tunnukset.php';
+require './tunnukset.php';
 include('posti.php');
 
 

@@ -2,7 +2,7 @@
 require 'Exception.php';
 require 'PHPMailer.php';
 require 'SMTP.php';
-require '../../../tunnukset.php';
+require './tunnukset.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -30,6 +30,13 @@ $mail->addAddress($emailTo, $emailToName);
 $mail->Subject = $subject;
 $mail->msgHTML($msg); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
 $mail->AltBody = 'HTML messaging not supported';
+$mail->SMTPOptions = array(
+    'tls' => array(
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true
+    )
+    );
 // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
 if(!@$mail->send()){
     $tulos = false;

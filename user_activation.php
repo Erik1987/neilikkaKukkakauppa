@@ -12,7 +12,7 @@
     }*/
 
     $token = !empty($_GET['token']) ? $_GET['token'] : "";
- 
+    
     if ($token) {
         /* Huom. token eri tauluun, rajattu tokenin voimassaoloaika */
         $sqlQuery = mysqli_query($connection, "SELECT * FROM users WHERE token = '$token'");

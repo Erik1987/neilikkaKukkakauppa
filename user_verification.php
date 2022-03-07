@@ -26,7 +26,7 @@
                 <?php echo $activation_error; ?>
             </div>
             <p class="lead">If user account is verified then click on the following button to login.</p>
-            <a class="btn btn-lg btn-success" href="http://localhost/hello/PHP/neilikka/index.php"
+            <a class="btn btn-lg btn-success" href="https://localhost/hello/PHP/neilikka/login-form.php"
                >Click to Login
             </a>
         </div>
