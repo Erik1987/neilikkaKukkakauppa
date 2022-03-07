@@ -64,7 +64,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <body>
 
 <form action="./register_controller.php" method="post" style="max-width:500px;margin:auto">
-  <h2>Rekisteröidy</h2>
+<div class="card ">
+   <div class="card-header">
+          <h3 class='text-center'>Rekisteröidy</h3>
+        </div>
   
   <div class="input-container">
     <i class="fa fa-user icon"></i>
